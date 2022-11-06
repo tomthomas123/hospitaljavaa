@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24b646f8-0b04-444d-8632-d63900fdea6d" name="Changes" comment="" />
+    <list default="true" id="24b646f8-0b04-444d-8632-d63900fdea6d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

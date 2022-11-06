@@ -53,6 +53,65 @@ public class Hospital {
                         System.out.println(e);
                     }
                     break;
+                case 2:
+                    System.out.println("View the data ");
+                    try{
+                        Class.forName("com.mysql.jdbc.Driver");
+                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitaldb","root","");
+                        String sql = "SELECT  `patient_id`, `name`, `address`, `pincode`, `phone`, `symptoms`, `doc_name` FROM `patients`  ";
+                        Statement stmt = con.createStatement();
+                        ResultSet rs = stmt.executeQuery(sql);
+                        while (rs.next()){
+                            String getId = rs.getString("patient_id");
+                            String getName = rs.getString("name");
+                            String getAddr = rs.getString("address");
+                            String getPin = rs.getString("pincode");
+                            String getPhone = rs.getString("Phone");
+                            String getSymp = rs.getString("symptoms");
+                            String getDoc = rs.getString("doc_name");
+                            System.out.println("Patient id="+getId);
+                            System.out.println("Patient name="+getName);
+                            System.out.println("Patient Address="+getAddr);
+                            System.out.println("Patient pincode="+getPin);
+                            System.out.println("Patient phone="+getPhone);
+                            System.out.println("Patient Symptoms="+getSymp);
+                            System.out.println("Patient Doctor name="+getDoc+'\n');
+                        }
+                    }
+                    catch (Exception e){
+                        System.out.println(e);
+                    }
+                    break;
+                case 3:
+                    System.out.println("Search the data ");
+                    id = hos.nextInt();
+                    try{
+                        Class.forName("com.mysql.jdbc.Driver");
+                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitaldb","root","");
+                        String sql = "SELECT  `patient_id`, `name`, `address`, `pincode`, `phone`, `symptoms`, `doc_name` FROM `patients` WHERE `patient_id`="+String.valueOf(id);
+                        Statement stmt = con.createStatement();
+                        ResultSet rs = stmt.executeQuery(sql);
+                        while (rs.next()){
+                            String getId = rs.getString("patient_id");
+                            String getName = rs.getString("name");
+                            String getAddr = rs.getString("address");
+                            String getPin = rs.getString("pincode");
+                            String getPhone = rs.getString("phone");
+                            String getSymp = rs.getString("symptoms");
+                            String getDoc = rs.getString("doc_name");
+                            System.out.println("Patient id="+getId);
+                            System.out.println("Patient name="+getName);
+                            System.out.println("Patient Address="+getAddr);
+                            System.out.println("Patient pincode="+getPin);
+                            System.out.println("Patient phone="+getPhone);
+                            System.out.println("Patient Symptoms="+getSymp);
+                            System.out.println("Patient Doctor name="+getDoc+'\n');
+                        }
+                    }
+                    catch (Exception e){
+                        System.out.println(e);
+                    }
+                    break;
 
             }
         }
