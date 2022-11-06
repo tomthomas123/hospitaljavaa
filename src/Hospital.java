@@ -188,7 +188,7 @@ public class Hospital {
                         while (rs.next()){
                             String getCount = rs.getString("number");
                             String getDoc = rs.getString("name");
-                            System.out.println("Number of patients consult to this doctor for fever +"+getCount);
+                            System.out.println("Number of patients consult to this doctor for fever "+getCount);
                             System.out.println("Name of doctor ="+getDoc+'\n');
 
                         }
